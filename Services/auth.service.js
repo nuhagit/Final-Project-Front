@@ -1,9 +1,9 @@
 import app from "./config";
 
-export const Login = async (body) => {
+export const login = async (body) => {
     try {
-        const result = await app.post('auth/login')
-        console.log(result)
+        const {data} = await app.post('/auth/login', body)
+         return data
     } catch (error) {
         throw Error (error)
     }

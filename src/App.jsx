@@ -1,9 +1,9 @@
-import LoginCard from './Components/Login/Login'
+import Login from './Components/Login/Login'
 import './App.css'
 
 function App() {
   return (
-    <LoginCard/>
+    <Login/>
   )
 }
 
