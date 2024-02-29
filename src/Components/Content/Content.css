@@ -1,9 +1,9 @@
-#header {
+#content {
     width: 100vw;
-    height: 10%;
-    background-color: blueviolet;
+    height: 90vh;
     display: flex;
-    position: relative;
     align-items: center;
     justify-content: center;
 }
+
+

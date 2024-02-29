@@ -5,7 +5,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-image: url("https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/msc/ul/g/94/07/940754cb-5070-44c3-9043feb019569c60.jpg/_jcr_content/renditions/cq5dam.medium.1584.1584.jpeg");
+  background-size: cover;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

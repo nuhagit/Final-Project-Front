@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { Button, Card, CardActions, CardContent, CardHeader, Divider, TextField} from '@mui/material'
+import { Button, Card, CardActions, CardContent, CardHeader, Divider, TextField, Typography } from '@mui/material'
+
+import { login } from '../../Services/authService'
 
 function Login() {
 
@@ -7,13 +9,18 @@ function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const onLogin = () => {
-        console.log(email, password)
+    const onLogin = async () => {
+      const { result } = await login({ email, password })
+      localStorage.setItem('token', result)
     }
 
     return (
         
-    <Card sx={{ maxWidth: '500px' }}>
+    <Card sx={{
+      maxWidth: '500px',
+      position: 'absolute',
+      display: 'felx',
+      flexWrap: 'wrap'}}>
     <CardHeader title="Login" />
     <CardContent>
       <TextField
@@ -29,7 +36,11 @@ function Login() {
         variant="outlined"
         fullWidth={true}
       />
-   
+      {/* {errorMessage && (
+        <Typography color="error" textAlign="center" mt={2}>
+          {errorMessage}
+        </Typography>
+      )} */}
     </CardContent>
     <Divider />
     <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
