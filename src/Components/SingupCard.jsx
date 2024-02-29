@@ -64,14 +64,14 @@ function Signup() {
                <SelectSex handleSex={handleSex} />
                 <TextField
                     onChange={(e) => setHeight(e.target.value)}
-                    label="Height"
+                    label="Height(cm)"
                     variant="outlined"
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}
                 />
                 <TextField
                     onChange={(e) => setWeight(e.target.value)}
-                    label="Weight"
+                    label="Weight(kg)"
                     variant="outlined"
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}

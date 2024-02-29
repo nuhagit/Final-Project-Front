@@ -15,6 +15,10 @@ function Login() {
       localStorage.setItem('token', result) 
       navigate('/dashboard')
     }
+    const onSignup = async() => {
+        console.log("Redirected to signup")
+        navigate('/signup')
+      }
     return (
         <Card sx={{ maxWidth: '500px', className:"marcos"}}>
             <CardHeader title="Login" />
@@ -46,7 +50,7 @@ function Login() {
             </CardContent>
             <Divider />
             <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <Button>Register</Button>
+                <Button onClick={onSignup}>Sign up</Button>
                 <Button onClick={onLogin} color="success">
                     Login
                 </Button>
