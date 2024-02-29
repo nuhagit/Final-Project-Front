@@ -9,7 +9,8 @@ function Login() {
 
     const onLogin = async() => {
       const {result} = await login({email, password})
-      localStorage.setItem('token', result)
+      console.log("Login correct")
+      localStorage.setItem('token', result) 
     }
     return (
         <Card sx={{ maxWidth: '500px', className:"marcos"}}>
