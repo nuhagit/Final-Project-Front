@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Button, Card, CardActions, CardContent, CardHeader, Divider, TextField, FormControlLabel, Checkbox } from '@mui/material'
 import { login } from '../../../Services/auth.service'
 
 function Login() {
+    const navigate = useNavigate()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [showPassword, setShowPassword] = useState(false)
@@ -11,6 +13,7 @@ function Login() {
       const {result} = await login({email, password})
       console.log("Login correct")
       localStorage.setItem('token', result) 
+      navigate('/dashboard')
     }
     return (
         <Card sx={{ maxWidth: '500px', className:"marcos"}}>

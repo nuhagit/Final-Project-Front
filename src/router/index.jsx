@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, redirect } from "react-router-dom";
 import Login from "../Components/Login/Login";
 import Dashboard from "../Pages/Dashboard";
 
@@ -9,7 +9,14 @@ const router = createBrowserRouter([
   },
   {
     path:'/dashboard',
-    element: <Dashboard />
+    element: <Dashboard />,
+    loader: () => {
+        if(!localStorage.getItem('token')) {
+           return redirect('/')
+        } else {
+            return null
+        }
+    }
   }
 ]);
 
