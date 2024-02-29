@@ -1,9 +1,11 @@
-import Login from './Components/Login/Login'
+
+import { RouterProvider } from 'react-router-dom'
+import routerInst from './router'
 import './App.css'
 
 function App() {
   return (
-    <Login/>
+    <RouterProvider router={routerInst}/>
   )
 }
 
