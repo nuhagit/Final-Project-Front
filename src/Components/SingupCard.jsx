@@ -14,16 +14,35 @@ function Signup() {
     const [age,setAge] = useState('')
     const [height, setHeight] = useState('')
     const [weight, setWeight] = useState('')
-   
-
+    const [sex, setSex] = useState('')
+    const [availability, setAvailability] = useState('')
+    const [goal, setGoal] = useState('')
 
 
     const onSignup = async() => {
-      const {result} = await signup({username, email, password,age,height,weight})
-      console.log("Login correct")
+      const {result} = await signup({username, email, password,age,height,weight,sex,availability,goal})
+      console.log("Sign up correct")
       localStorage.setItem('token', result) 
 
     }
+
+ const handleSex = (e) => {
+    setSex(e.target.value)
+ }
+
+ const handleAvailability = (e) => {
+
+    setAvailability(e.target.value)
+    console.log(availability)
+ }
+
+
+ const handleGoal = (e) => {
+    setGoal(e.target.value)
+ }
+
+
+
     return (
         <Card sx={{ maxWidth: '500px', className:"marcos"}}>
             <CardHeader title="Sign Up" />
@@ -42,7 +61,7 @@ function Signup() {
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}
                 />
-                <SelectSex/>
+               <SelectSex handleSex={handleSex} />
                 <TextField
                     onChange={(e) => setHeight(e.target.value)}
                     label="Height"
@@ -57,10 +76,8 @@ function Signup() {
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}
                 />
-                <SelectAvailability
-                
-                />
-               <SelectGoal />
+               <SelectAvailability handleAvailability={handleAvailability} />
+               <SelectGoal handleGoal={handleGoal} />
                  <TextField
                     onChange={(e) => setEmail(e.target.value)}
                     label="Email"

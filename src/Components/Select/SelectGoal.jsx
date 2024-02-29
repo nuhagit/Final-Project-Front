@@ -5,20 +5,21 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function SelectGoal() {
+export default function SelectGoal({handleGoal}) {
   const [goal, setGoal] = React.useState('');
 
   const handleChange = (event) => {
     setGoal(event.target.value);
+    handleGoal(event)
   };
 
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Goal</InputLabel>
+        <InputLabel id="demo-simple-select-goal">Goal</InputLabel>
         <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
+          labelId="demo-simple-select-goal"
+          id="demo-simple-goal"
           value={goal}
           label="Goal"
           onChange={handleChange}

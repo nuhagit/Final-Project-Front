@@ -5,20 +5,22 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function SelectAvailability() {
+export default function SelectAvailability({handleAvailability}) {
   const [availability, setAvailability] = React.useState('');
 
   const handleChange = (event) => {
+    
     setAvailability(event.target.value);
+    handleAvailability(event)
   };
 
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Availability</InputLabel>
+        <InputLabel id="demo-simple-select-av">Availability</InputLabel>
         <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
+          labelId="demo-simple-select-av"
+          id="demo-simple-av"
           value={availability}
           label="Availability"
           onChange={handleChange}

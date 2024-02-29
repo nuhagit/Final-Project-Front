@@ -5,11 +5,12 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function SelectSex() {
+export default function SelectSex({handleSex}) {
   const [sex, setSex] = React.useState('');
 
   const handleChange = (event) => {
-    setSex(event.target.value);
+    setSex(event.target.value)
+    handleSex(event);
   };
 
   return (
