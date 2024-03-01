@@ -21,4 +21,8 @@ input::selection {
     background-color: #8996aa;
     color: #303030;
 }
+
+input:invalid {
+    color: #e00000;
+}
     

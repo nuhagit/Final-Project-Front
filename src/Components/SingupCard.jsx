@@ -88,6 +88,7 @@ function Signup() {
                     onChange={(e) => setEmail(e.target.value)}
                     label="Email"
                     variant="outlined"
+                    type="email"
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}
                 />
