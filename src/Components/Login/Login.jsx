@@ -19,7 +19,7 @@ function Login() {
     const onSignup = async() => {
         console.log("Redirected to signup")
         navigate('/signup')
-      }
+    }
     return (
         <Card id="login" sx={{ maxWidth: '500px', className:"marcos"}}>
             <CardHeader title="Login" />
@@ -52,9 +52,7 @@ function Login() {
             <Divider />
             <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <Button onClick={onSignup}>Sign up</Button>
-                <Button onClick={onLogin} color="success">
-                    Login
-                </Button>
+                <Button onClick={onLogin} color="success">Login</Button>
             </CardActions>
         </Card>
     )

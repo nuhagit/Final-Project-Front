@@ -10,6 +10,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import "./Sidebar.css"
 
 export default function AnchorTemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -35,7 +36,7 @@ export default function AnchorTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {['Dahsboard', , 'Training', ].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -46,9 +47,8 @@ export default function AnchorTemporaryDrawer() {
           </ListItem>
         ))}
       </List>
-      <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {[ , , 'Logout'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -64,7 +64,7 @@ export default function AnchorTemporaryDrawer() {
 
   return (
     <div>
-      {['open menu'].map((anchor) => (
+      {['Menu'].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button size="large"
                 aria-label="account of current user"
@@ -73,7 +73,7 @@ export default function AnchorTemporaryDrawer() {
                 color="inherit" 
                 onClick={toggleDrawer(anchor, true)}>{anchor}
           </Button>
-          <Drawer
+          <Drawer 
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}

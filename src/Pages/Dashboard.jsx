@@ -7,7 +7,7 @@ function Dashboard() {
     
     <div id='center'>
       <MenuAppBar />
-     
+
       </div>
    
     

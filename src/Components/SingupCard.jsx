@@ -28,8 +28,6 @@ function Signup() {
       console.log("Sign up correct")
       localStorage.setItem('token', result) 
       navigate('/dashboard')
-
-
     }
 
  const handleSex = (e) => {
@@ -112,10 +110,7 @@ function Signup() {
             </CardContent>
             <Divider />
             <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-              
-                <Button onClick={onSignup} color="success">
-                    SIGN UP
-                </Button>
+                <Button onClick={onSignup} color="success">SIGN UP</Button>
             </CardActions>
         </Card>
     )
