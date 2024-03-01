@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Button, Card, CardActions, CardContent, CardHeader, Divider, TextField, FormControlLabel, Checkbox} from '@mui/material'
 import { signup } from "../../Services/auth.service";
+import { useNavigate } from 'react-router-dom'
 import SelectAvailability from "./Select/SelectAvailability";
 import SelectSex from "./Select/SelectSex";
 import SelectGoal from "./Select/SelectGoal";
 
 
 function Signup() {
+    const navigate = useNavigate()
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -18,11 +20,14 @@ function Signup() {
     const [availability, setAvailability] = useState('')
     const [goal, setGoal] = useState('')
 
-
+    
     const onSignup = async() => {
+      //const trainingId = 1
       const {result} = await signup({username, email, password,age,height,weight,sex,availability,goal})
       console.log("Sign up correct")
       localStorage.setItem('token', result) 
+      navigate('/dashboard')
+
 
     }
 

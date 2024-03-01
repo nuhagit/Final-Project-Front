@@ -1,9 +1,15 @@
-
-
+import MenuAppBar from "../Components/Header/Header"
+import './Dashboard.css'
 
 function Dashboard() {
   return (
-    <div>WELCOME</div>
+    
+    <div id='center'>
+      <MenuAppBar />
+      </div>
+   
+    
+    
   )
 }
 
