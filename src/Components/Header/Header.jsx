@@ -12,6 +12,7 @@ import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import './Header.css'
+import AnchorTemporaryDrawer from '../Sidebar/Sidebar';
 
 export default function MenuAppBar() {
   const [auth, setAuth] = React.useState(true);
@@ -33,30 +34,15 @@ export default function MenuAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar className='header'>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
+        <AnchorTemporaryDrawer 
+            />
+           
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             My Fitness Journey
           </Typography>
           {auth && (
             <div>
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleMenu}
-                color="inherit"
-              >
-                <AccountCircle />
-              </IconButton>
+          
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorEl}
