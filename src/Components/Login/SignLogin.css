@@ -1,0 +1,24 @@
+#login {
+    background-color:#303030 !important;
+    border-color: red !important;
+    color: #8996aa !important;
+}
+    
+label {
+    color: #8996aa !important;
+}
+    
+ul {
+    background-color:#303030;
+    color: #8996aa;
+}
+    
+div {
+    color: #8996aa !important;
+}
+
+input::selection {
+    background-color: #8996aa;
+    color: #303030;
+}
+    

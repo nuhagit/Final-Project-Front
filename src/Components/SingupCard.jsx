@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import SelectAvailability from "./Select/SelectAvailability";
 import SelectSex from "./Select/SelectSex";
 import SelectGoal from "./Select/SelectGoal";
+import "./Login/SignLogin.css"
 
 
 function Signup() {
@@ -20,12 +21,15 @@ function Signup() {
     const [availability, setAvailability] = useState('')
     const [goal, setGoal] = useState('')
 
-
+    
     const onSignup = async() => {
+      //const trainingId = 1
       const {result} = await signup({username, email, password,age,height,weight,sex,availability,goal})
       console.log("Sign up correct")
       localStorage.setItem('token', result) 
       navigate('/dashboard')
+
+
     }
 
  const handleSex = (e) => {
@@ -46,7 +50,7 @@ function Signup() {
 
 
     return (
-        <Card sx={{ maxWidth: '500px', className:"marcos"}}>
+        <Card id="login" sx={{ maxWidth: '500px', className:"marcos"}}>
             <CardHeader title="Sign Up" />
             <CardContent>
             <TextField
@@ -66,14 +70,14 @@ function Signup() {
                <SelectSex handleSex={handleSex} />
                 <TextField
                     onChange={(e) => setHeight(e.target.value)}
-                    label="Height"
+                    label="Height(cm)"
                     variant="outlined"
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}
                 />
                 <TextField
                     onChange={(e) => setWeight(e.target.value)}
-                    label="Weight"
+                    label="Weight(kg)"
                     variant="outlined"
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}

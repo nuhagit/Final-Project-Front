@@ -1,9 +1,17 @@
-
-
+import MenuAppBar from "../Components/Header/Header"
+import './Dashboard.css'
+import AnchorTemporaryDrawer from "../Components/Sidebar/Sidebar"
 
 function Dashboard() {
   return (
-    <div>WELCOME</div>
+    
+    <div id='center'>
+      <MenuAppBar />
+     
+      </div>
+   
+    
+    
   )
 }
 

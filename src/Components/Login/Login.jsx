@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button, Card, CardActions, CardContent, CardHeader, Divider, TextField, FormControlLabel, Checkbox } from '@mui/material'
 import { login } from '../../../Services/auth.service'
+import "./SignLogin.css"
 
 function Login() {
     const navigate = useNavigate()
@@ -15,14 +16,12 @@ function Login() {
       localStorage.setItem('token', result) 
       navigate('/dashboard')
     }
-
-    const onSignUp = async() => {
-        console.log("Redirected")
+    const onSignup = async() => {
+        console.log("Redirected to signup")
         navigate('/signup')
-    }
-
+      }
     return (
-        <Card sx={{ maxWidth: '500px', className:"marcos"}}>
+        <Card id="login" sx={{ maxWidth: '500px', className:"marcos"}}>
             <CardHeader title="Login" />
             <CardContent>
                 <TextField
@@ -52,7 +51,7 @@ function Login() {
             </CardContent>
             <Divider />
             <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <Button onClick={onSignUp} color="success">Sign Up</Button>
+                <Button onClick={onSignup}>Sign up</Button>
                 <Button onClick={onLogin} color="success">
                     Login
                 </Button>

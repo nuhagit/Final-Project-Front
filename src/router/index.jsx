@@ -11,6 +11,7 @@ const router = createBrowserRouter([
   {
     path:'/dashboard',
     element: <Dashboard />,
+  
     loader: () => {
         if(!localStorage.getItem('token')) {
            return redirect('/')
