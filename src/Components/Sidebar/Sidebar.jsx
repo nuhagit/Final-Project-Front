@@ -10,6 +10,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { useNavigate } from 'react-router-dom'
+import { login } from '../../../Services/auth.service.js'
 import "./Sidebar.css"
 
 export default function AnchorTemporaryDrawer() {
@@ -27,6 +29,14 @@ export default function AnchorTemporaryDrawer() {
 
     setState({ ...state, [anchor]: open });
   };
+
+  const navigate = useNavigate()
+
+  const onLogOut = async() => {
+    localStorage.clear('token')
+    console.log("Logged out")
+    navigate('/')
+  }
 
   const list = (anchor) => (
     <Box
@@ -48,7 +58,7 @@ export default function AnchorTemporaryDrawer() {
         ))}
       </List>
       <List>
-        {[ , , 'Logout'].map((text, index) => (
+        {[ , , 'Log out'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -77,9 +87,9 @@ export default function AnchorTemporaryDrawer() {
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
-
           >
             {list(anchor)}
+            <Button onClick={onLogOut}>Logout</Button>
           </Drawer>
         </React.Fragment>
       ))}
