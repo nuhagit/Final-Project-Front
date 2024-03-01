@@ -1,7 +1,9 @@
 #root {
   width: 100vw;
   margin: 0 auto;
-  
+  justify-content: center;
+  display: flex;
+
   text-align: center;
 }
 
