@@ -12,24 +12,29 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData('DAY 1', 15, 6.0, 24, 4.0),
+  createData('DAY 2', 237, 9.0, 37, 4.3),
+  createData('DAY 3', 262, 16.0, 24, 6.0),
+ 
 ];
 
 export default function BasicTable() {
+  
+
+const marcos = localStorage.getItem('userId')
+console.log(marcos)
+
+
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ width: '500px'}} aria-label="simple table">
+      <Table sx={{ }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>WORKOUT </TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell align="left">EXERCISE</TableCell>
+            <TableCell align="right">SETS</TableCell>
+            <TableCell align="right">REPS</TableCell>
+            <TableCell align="right">DESCRIPTION</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

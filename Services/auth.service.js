@@ -17,3 +17,4 @@ export const signup = async (body) => {
         throw Error(error)
     }
 }
+

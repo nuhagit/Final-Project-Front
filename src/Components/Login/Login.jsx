@@ -10,10 +10,11 @@ function Login() {
     const [showPassword, setShowPassword] = useState(false)
 
     const onLogin = async() => {
-      const {result} = await login({email, password})
+      const data = await login({email, password})
       console.log("Login correct")
-      localStorage.setItem('token', result) 
-      navigate('/dashboard')
+      localStorage.setItem('token', data.token) 
+     //localStorage.setItem('userId', data.user.id) 
+      navigate(`/dashboard/${data.user.id}`)
     }
     const onSignup = async() => {
         console.log("Redirected to signup")

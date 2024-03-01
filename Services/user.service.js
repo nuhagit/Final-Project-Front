@@ -9,3 +9,15 @@ export const GetUserById = async () => {
         throw Error (error)
     }
 }
+
+
+export const getUserData = async (id) => {
+    try {
+        const { data } = await app.get(`/user/training/${id}`)
+        console.log(data)
+        return data
+    } catch (error) {
+        console.log(error)
+        return error
+    }
+}
