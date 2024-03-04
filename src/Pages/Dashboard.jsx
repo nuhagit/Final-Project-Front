@@ -1,3 +1,4 @@
+import AnchorTemporaryDrawer from "../Components/Sidebar/Sidebar"
 import MenuAppBar from "../Components/Header/Header"
 import './Dashboard.css'
 import React, { useEffect, useState } from "react"
@@ -11,9 +12,8 @@ const Dashboard = () => {
   const {userId} = useParams('userId')
 
   const [user, setUser] = useState({})
-
+}
   useEffect(() => {
-
 const loadData = async () => { 
 
   const user = await getUserData(userId)
@@ -22,28 +22,21 @@ const loadData = async () => {
   console.log(training)
 
 }
-
 loadData()
-
-  }, [])
-
+}, [])
 
 
 
-
-  return (
+// function Dashboard() {
+//   return (
     
-    <div id='center'>
-      <MenuAppBar />
-     <div id="table">
-     <BasicTable/>
-     </div>
-     
-      </div>
-   
-    
-    
-  )
-};
+//     <div id='center'>
+//       <MenuAppBar />
+//      <div id="table">
+//      <BasicTable/>
+//      </div>
+//       </div>
+//   )
+// };
 
 export default Dashboard
