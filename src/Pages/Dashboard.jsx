@@ -35,14 +35,14 @@ loadData()
 
 
   return (
-    
+    <>
     <div id='center'>
       <MenuAppBar id='header'/>
+     </div>
       <div id='ejercicios'>
      <ExerciseList />
      </div>
-     </div>
-   
+   </>
     
     
   )

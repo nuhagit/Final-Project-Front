@@ -4,11 +4,11 @@ import './ExerciseCard.css'
 const ExerciseCard = ({ title, series, repetitions, description }) => {
 
   return (
-    <div id='exercises'style={cardStyle}>
-      <h3>{title}</h3>
-      <p>Series: {series}</p>
-      <p>Repetitions: {repetitions}</p>
-      <p>Description: {description}</p>
+      <div id='exercises'style={cardStyle}>
+        <h3 id='h3'>{title}</h3><br/>
+      <span><p>Repetitions: {repetitions}</p>
+      <p>Series: {series}</p></span>
+      <p>Description: {description}</p><br/>
     </div>
   );
 };

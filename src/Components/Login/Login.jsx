@@ -21,6 +21,7 @@ function Login() {
         console.log("Redirected to signup")
         navigate('/signup')
       }
+    const handleKeyDown = (event) => {if (event.key === 'Enter') {onLogin()}};
     return (
         <Card id='login' sx={{ maxWidth: '500px', className:"marcos"}}>
             <CardHeader title="Login" />
@@ -31,6 +32,7 @@ function Login() {
                     variant="outlined"
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}
+                    onKeyDown={handleKeyDown}
                 />
                 <TextField
                     onChange={(e) => setPassword(e.target.value)}
