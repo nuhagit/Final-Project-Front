@@ -15,18 +15,16 @@ function Login() {
       console.log("Login correct")
       localStorage.setItem('token', data.token) 
      //localStorage.setItem('userId', data.user.id) 
-      navigate(`/dashboard/${data.user.id}`)
-      const {result} = await login({email, password})
-      console.log("Login correct")
-      localStorage.setItem('token', result) 
-      navigate('/dashboard')
+      navigate(`/dashboard`)
     }
     
     const onSignup = async() => {
         console.log("Redirected to signup")
         navigate('/signup')
     }
-    
+
+    const handleKeyDown = (event) => {if (event.key === 'Enter') {onLogin()}};
+
     return (
         <Card id="login" sx={{ maxWidth: '500px', className:"marcos"}}>
             <CardHeader title="Login" />
@@ -37,6 +35,7 @@ function Login() {
                     variant="outlined"
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}
+                    onKeyDown={handleKeyDown}
                 />
                 <TextField
                     onChange={(e) => setPassword(e.target.value)}
@@ -44,6 +43,7 @@ function Login() {
                     type={showPassword ? 'text' : 'password'} 
                     variant="outlined"
                     fullWidth={true}
+                    onKeyDown={handleKeyDown}
                 />
                 <FormControlLabel
                     control={

@@ -37,7 +37,6 @@ function Signup() {
  }
 
  const handleAvailability = (e) => {
-
     setAvailability(e.target.value)
     console.log(availability)
  }
@@ -47,7 +46,7 @@ function Signup() {
     setGoal(e.target.value)
  }
 
-
+ const handleKeyDown = (event) => {if (event.key === 'Enter') {onSignup()}};
 
     return (
         <Card id="login" sx={{ maxWidth: '500px', className:"marcos"}}>
@@ -59,6 +58,7 @@ function Signup() {
                     variant="outlined"
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}
+                    onKeyDown={handleKeyDown}
                 />
                 <TextField
                     onChange={(e) => setAge(e.target.value)}
@@ -66,6 +66,7 @@ function Signup() {
                     variant="outlined"
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}
+                    onKeyDown={handleKeyDown}
                 />
                <SelectSex handleSex={handleSex} />
                 <TextField
@@ -74,6 +75,7 @@ function Signup() {
                     variant="outlined"
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}
+                    onKeyDown={handleKeyDown}
                 />
                 <TextField
                     onChange={(e) => setWeight(e.target.value)}
@@ -81,6 +83,7 @@ function Signup() {
                     variant="outlined"
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}
+                    onKeyDown={handleKeyDown}
                 />
                <SelectAvailability handleAvailability={handleAvailability} />
                <SelectGoal handleGoal={handleGoal} />
@@ -91,6 +94,7 @@ function Signup() {
                     type="email"
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}
+                    onKeyDown={handleKeyDown}
                 />
                 <TextField
                     onChange={(e) => setPassword(e.target.value)}
@@ -98,6 +102,7 @@ function Signup() {
                     type={showPassword ? 'text' : 'password'} 
                     variant="outlined"
                     fullWidth={true}
+                    onKeyDown={handleKeyDown}
                 />
                 <FormControlLabel
                     control={
@@ -112,9 +117,6 @@ function Signup() {
             </CardContent>
             <Divider />
             <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <Button onClick={onSignup} color="success">
-                    SIGN UP
-                </Button>
                 <Button onClick={onLogin} color="success">Login</Button>
                 <Button onClick={onSignup} color="success">SIGN UP</Button>
             </CardActions>

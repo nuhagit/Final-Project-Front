@@ -1,3 +1,10 @@
 .css-n6v7qi-MuiPaper-root-MuiDrawer-paper {
     background-color: #303030 !important;
+    padding-top: 2%;
+}
+
+.avatar {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
 }
