@@ -39,7 +39,11 @@ export default function AnchorTemporaryDrawer() {
   }
 
   const onDashboard = async() => {
-    navigate('/training')
+    navigate('/dashboard')
+  }
+
+  const onProfile = async() => {
+    navigate('/profile')
   }
 
   const onTraining = async() => {
@@ -53,43 +57,38 @@ export default function AnchorTemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-       {/* <List>
-         {['Dahsboard', , 'Training', ].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List> */}
+      <List className='avBox'><img className='avatar' src='../../images/My-Fitness-Journey(avatar).png'/></List>
       <List>
-         {['Dahsboard', , 'Training', ].map((text, index) => (
-          <ListItem key='Training' disablePadding onClick={onLogOut}>
+         {['Dashboard'].map((text, index) => (
+          <ListItem key={text} disablePadding onClick={onDashboard}>
             <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List> 
-      <Divider />
-       <List>
-         {[ , , 'Log out'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
+              <img className='dashHome' src='../../images/Home(icon).png'/>
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
+      <List>
+         {['Profile'].map((text, index) => (
+          <ListItem key={text} disablePadding onClick={onProfile}>
+            <ListItemButton>
+              <img className='icon' src='../../images/Profile(icon).png'/>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+       <List>
+         {['Training'].map((text, index) => (
+          <ListItem key={text} disablePadding onClick={onTraining}>
+            <ListItemButton>
+              <img className='icon' src='../../images/Training(icon).png'/>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider className='divider'/>
     </Box>
   );
 
@@ -110,12 +109,7 @@ export default function AnchorTemporaryDrawer() {
             onClose={toggleDrawer(anchor, false)}
           >
             {list(anchor)}
-            <img className='avatar' src='../../images/My-Fitness-Journey(avatar).png'/>
-            <hr/>
-
-            <Button onClick={onDashboard}>Dashboard</Button>
-            <Button onClick={onTraining}>Training</Button>
-            <Button onClick={onLogOut}>Logout</Button>
+            <Button id='dashOut' onClick={onLogOut}>Logout</Button>
           </Drawer>
         </React.Fragment>
       ))}

@@ -12,7 +12,7 @@ const Dashboard = () => {
 
   useEffect(() => {
 
-  const loadData = async () => { 
+const loadData = async () => { 
 
   const user = await getUserData(userId)
   const training = await getTrainingData(user.trainingId)
