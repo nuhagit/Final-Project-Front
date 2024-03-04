@@ -30,6 +30,7 @@ export default function AnchorTemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
+
   const navigate = useNavigate()
 
   const onLogOut = async() => {
@@ -59,6 +60,9 @@ export default function AnchorTemporaryDrawer() {
       </List>
       <List>
         {[ , , 'Log out'].map((text, index) => (
+      <Divider />
+      <List>
+        {['All mail', 'Trash', 'Spam'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -74,6 +78,7 @@ export default function AnchorTemporaryDrawer() {
 
   return (
     <div>
+
       {['Menu'].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button size="large"

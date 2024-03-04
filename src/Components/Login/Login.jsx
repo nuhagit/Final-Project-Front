@@ -20,7 +20,16 @@ function Login() {
     const onSignup = async() => {
         console.log("Redirected to signup")
         navigate('/signup')
+      const data = await login({email, password})
+      console.log("Login correct")
+      localStorage.setItem('token', data.token) 
+     //localStorage.setItem('userId', data.user.id) 
+      navigate(`/dashboard/${data.user.id}`)
     }
+    const onSignup = async() => {
+        console.log("Redirected to signup")
+        navigate('/signup')
+      }
     return (
         <Card id="login" sx={{ maxWidth: '500px', className:"marcos"}}>
             <CardHeader title="Login" />

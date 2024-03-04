@@ -38,7 +38,9 @@ export default function MenuAppBar() {
             />
            
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+
             {name}'s Fitness Journey
+
           </Typography>
           {auth && (
             <div>

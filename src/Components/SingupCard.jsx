@@ -7,7 +7,6 @@ import SelectSex from "./Select/SelectSex";
 import SelectGoal from "./Select/SelectGoal";
 import "./Login/SignLogin.css"
 
-
 function Signup() {
     const navigate = useNavigate()
     const [username, setUsername] = useState('')
@@ -31,6 +30,7 @@ function Signup() {
 
     const onLogin = async() => {
         navigate('/')
+
     }
 
  const handleSex = (e) => {
