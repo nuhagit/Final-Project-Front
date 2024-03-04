@@ -18,11 +18,3 @@ export const signup = async (body) => {
     }
 }
 
-// export const logout = async (body) => {
-//     try {
-//         const {data} = await app.delete('/auth/login', body)
-//         return data
-//     } catch (error) {
-//         throw Error(error)
-//     }
-// }
