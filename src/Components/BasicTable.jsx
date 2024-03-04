@@ -6,10 +6,10 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
+
 
 const rows = [
   createData('DAY 1', 15, 6.0, 24, 4.0),
@@ -21,8 +21,8 @@ const rows = [
 export default function BasicTable() {
   
 
-const marcos = localStorage.getItem('userId')
-console.log(marcos)
+
+
 
 
   return (

@@ -10,6 +10,9 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { useNavigate } from 'react-router-dom'
+import { login } from '../../../Services/auth.service.js'
+import "./Sidebar.css"
 
 export default function AnchorTemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -26,6 +29,12 @@ export default function AnchorTemporaryDrawer() {
 
     setState({ ...state, [anchor]: open });
   };
+  const navigate = useNavigate()
+  const onLogOut = async() => {
+    localStorage.clear('token')
+    console.log("Logged out")
+    navigate('/')
+  }
 
   const list = (anchor) => (
     <Box
@@ -80,6 +89,7 @@ export default function AnchorTemporaryDrawer() {
 
           >
             {list(anchor)}
+            <Button onClick={onLogOut}>Logout</Button>
           </Drawer>
         </React.Fragment>
       ))}

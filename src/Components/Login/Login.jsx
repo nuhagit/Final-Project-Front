@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button, Card, CardActions, CardContent, CardHeader, Divider, TextField, FormControlLabel, Checkbox } from '@mui/material'
 import { login } from '../../../Services/auth.service'
+import './SignLogin.css'
 
 function Login() {
     const navigate = useNavigate()
@@ -21,7 +22,7 @@ function Login() {
         navigate('/signup')
       }
     return (
-        <Card sx={{ maxWidth: '500px', className:"marcos"}}>
+        <Card id='login' sx={{ maxWidth: '500px', className:"marcos"}}>
             <CardHeader title="Login" />
             <CardContent>
                 <TextField

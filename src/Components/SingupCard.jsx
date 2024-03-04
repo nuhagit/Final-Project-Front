@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import SelectAvailability from "./Select/SelectAvailability";
 import SelectSex from "./Select/SelectSex";
 import SelectGoal from "./Select/SelectGoal";
-
+import './Login/SignLogin.css'
 
 function Signup() {
     const navigate = useNavigate()
@@ -49,7 +49,7 @@ function Signup() {
 
 
     return (
-        <Card sx={{ maxWidth: '500px', className:"marcos"}}>
+        <Card id='login'sx={{ maxWidth: '500px', className:"marcos"}}>
             <CardHeader title="Sign Up" />
             <CardContent>
             <TextField
@@ -87,6 +87,7 @@ function Signup() {
                     onChange={(e) => setEmail(e.target.value)}
                     label="Email"
                     variant="outlined"
+                    type = 'email'
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}
                 />

@@ -2,17 +2,23 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content:center;
-    align-items: c;
+    position: relative;
     margin: 0;
 }
 
-#table {
+#ejercicios {
     position: absolute;
-    display: flex;
+    inline
+    flex-wrap: nowrap;
+    
     justify-content: center;
-    padding-top: 300px;
-    width: 35vw;
+    padding-top: 150px;
+    width: 100vw;
+    
     
     /* Add other styles as needed */
+}
+
+#header {
+    position: fixed;
 }

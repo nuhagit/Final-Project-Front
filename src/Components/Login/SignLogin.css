@@ -1,0 +1,65 @@
+
+
+#login {
+    background-color:#303030 !important;
+    border-color: red !important;
+    color: #8996aa !important;
+}
+    
+label {
+    color: #8996aa !important;
+}
+    
+ul {
+    background-color:#303030;
+    color: #8996aa;
+}
+
+input::selection {
+    background-color: #8996aa;
+    color: #303030;
+}
+
+input:invalid {
+    color: #e00000 !important;
+}
+
+input:hover {
+    color-scheme: red !important;
+}
+
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #8996aa !important;
+}
+
+.css-s482kj-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #8996aa !important;
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked, .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+    color: #8996aa !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    border-color: #8996aa !important;
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+    color: #8996aa !important;
+}
+
+.css-t8xdrv-MuiFormControl-root-MuiTextField-root {
+    border-color: red !important;
+}
+
+.css-1lg55su-MuiButtonBase-root-MuiButton-root {
+    color: #006eb9 !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    color: #8996aa !important;
+}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+    color: #8996aa !important;
+}
