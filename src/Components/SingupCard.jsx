@@ -21,13 +21,16 @@ function Signup() {
     const [availability, setAvailability] = useState('')
     const [goal, setGoal] = useState('')
 
-    
     const onSignup = async() => {
       //const trainingId = 1
       const {result} = await signup({username, email, password,age,height,weight,sex,availability,goal})
       console.log("Sign up correct")
       localStorage.setItem('token', result) 
       navigate('/dashboard')
+    }
+
+    const onLogin = async() => {
+        navigate('/')
     }
 
  const handleSex = (e) => {
@@ -110,6 +113,7 @@ function Signup() {
             </CardContent>
             <Divider />
             <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <Button onClick={onLogin} color="success">Login</Button>
                 <Button onClick={onSignup} color="success">SIGN UP</Button>
             </CardActions>
         </Card>

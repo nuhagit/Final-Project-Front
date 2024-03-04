@@ -16,6 +16,7 @@ function Login() {
       localStorage.setItem('token', result) 
       navigate('/dashboard')
     }
+    
     const onSignup = async() => {
         console.log("Redirected to signup")
         navigate('/signup')
