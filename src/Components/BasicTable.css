@@ -1,0 +1,20 @@
+.css-rqglhn-MuiTable-root {
+    background-color: #303030;
+}
+
+.css-rqglhn-MuiTable-root td {
+    background-color: #303030;
+    color: #5e6c85;
+    font-size: 28px !important;
+    border-color: #a8b7cf;
+}
+.css-1q1u3t4-MuiTableRow-root th {
+    color: #5d82b6 !important;
+}
+
+.css-rqglhn-MuiTable-root th {
+    color: #7088ac;
+    font-size: 30px !important;
+    font-weight: bolder;
+    border-color: #8996aa;
+}
