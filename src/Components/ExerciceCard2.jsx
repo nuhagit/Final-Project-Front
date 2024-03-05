@@ -1,7 +1,7 @@
 import React from "react";
 import './ExerciseCard.css'
 
-const ExerciseCard = ({ title, series, repetitions, description }) => {
+const ExerciseCard2 = ({ title, series, repetitions, description }) => {
 
   return (
       <div id='exercises'style={cardStyle}>
@@ -22,4 +22,4 @@ const cardStyle = {
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
 };
 
-export default ExerciseCard;
+export default ExerciseCard2;

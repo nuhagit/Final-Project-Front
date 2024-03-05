@@ -61,7 +61,7 @@ export default function AnchorTemporaryDrawer() {
          {['Dashboard'].map((text, index) => (
           <ListItem key={text} disablePadding onClick={onDashboard}>
             <ListItemButton>
-              {/* <img className='dashHome' src='../../images/Home(icon).png'/> */}
+              <img className='dashHome' src='../../images/Home(icon).png'/>
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>

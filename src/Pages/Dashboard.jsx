@@ -7,7 +7,8 @@ import { getUserData } from "../../Services/user.service";
 import { getTrainingData } from "../../Services/training.service";
 import { getExerciseData } from "../../Services/exercises.Service";
 import ExerciseList from "../Components/ExerciseCardConfig";
-import ExerciseCard from "../Components/ExerciceCard";
+
+import ExerciseList2 from "../Components/ExerciceCard2"
 const Dashboard = () => {
 
   const {userId} = useParams('userId')
@@ -21,7 +22,7 @@ const loadData = async () => {
   const user = await getUserData(userId)
   const training = await getTrainingData(user.trainingId)
 
-  const exercise = await getExerciseData(user.trainingId)
+  const exercise = await getExercis;eData(user.trainingId)
 
 
 }
@@ -41,7 +42,11 @@ loadData()
      </div>
       <div id='ejercicios'>
      <ExerciseList />
+     <ExerciseList2 />
      </div>
+     
+     
+     
    </>
     
     
