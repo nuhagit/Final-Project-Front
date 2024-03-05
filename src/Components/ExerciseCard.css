@@ -4,6 +4,7 @@
     background-color: #1A799B;
     flex-wrap: wrap; 
     justify-content: space-around; 
+    padding-right: 200px;
     
   }
   
@@ -11,6 +12,8 @@
     flex: 0 0 calc(33.33% - 16px); /* Makes each item take up one-third of the container width with some margin */
     margin: 8px; /* Adjust the margin as needed */
   }
+
+
 
   #h3 {
     width: 100%;

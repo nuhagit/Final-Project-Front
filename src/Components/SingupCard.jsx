@@ -23,10 +23,11 @@ function Signup() {
     
     const onSignup = async() => {
       //const trainingId = 1
-      const {result} = await signup({username, email, password,age,height,weight,sex,availability,goal})
+      const data = await signup({username, email, password,age,height,weight,sex,availability,goal})
+      console.log(data)
       console.log("Sign up correct")
-      localStorage.setItem('token', result) 
-      navigate('/dashboard')
+      localStorage.setItem('token', data.result) 
+      navigate(`/dashboard/${data.user.id}`)
 
 
     }

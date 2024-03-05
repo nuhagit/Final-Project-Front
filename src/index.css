@@ -2,10 +2,15 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  background-color: black;
+  background-image: url(https://wall-murals.ca/cdn/shop/products/WM_05_4_1024x1024@2x.jpg?v=1580838373);
+  background-attachment: fixed;
+  background-size:contain;
+  
+  
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
