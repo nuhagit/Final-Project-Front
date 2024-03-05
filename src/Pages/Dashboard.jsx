@@ -44,7 +44,9 @@ loadData()
       <div id='ejercicios'>
         <h1 id='push'>PUSH DAY</h1>
      <ExerciseList/>
+     <h1 id='push'>PULL DAY</h1>
      <ExerciseList2 />
+     <h1 id='push'>LEG DAY</h1>
      <ExerciseList3/>
      </div>
      

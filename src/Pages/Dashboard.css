@@ -27,7 +27,11 @@
 #push {
     display: flex;
     justify-content: center;
-    margin-right: 200px;
-    
+    margin-right: 290px;
+    margin-left: 15px;;
+    padding-bottom: 0;
+    margin-bottom: -100px;
+    border-radius: 8px;
+    background-color: black;
     
 }
