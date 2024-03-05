@@ -2,7 +2,12 @@ import app from "./config";
 
 export const GetUserById = async () => {
     try {
-        const {data} = await app.get('/user/41')
+        const {data} = await app.get('/user/41',  {
+            headers: {
+                authorization: localStorage.getItem('token')
+                
+            }
+        })
          return data
          
     } catch (error) {

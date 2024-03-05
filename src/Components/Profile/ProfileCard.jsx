@@ -1,5 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
@@ -10,13 +11,24 @@ import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Skeleton from '@mui/material/Skeleton';
 import './Profile.css'
+import { GetUserById } from '../../../Services/user.service';
+import { useEffect } from 'react';
+
 
 
 function Media(props) {
   const { loading = false } = props;
-
+  const [user, setUser] = useState(null)
+  const getUser = async () => {
+    const result = await GetUserById() 
+    setUser(result.result)
+    
+  }
+  useEffect(()=> {
+getUser()
+  },[])
   return (
-    <Card sx={{ width: '80vw', height: '60vh', m: 2 }}>
+    user&&<Card sx={{ width: '80vw', height: '60vh', m: 2 }}>
       <CardHeader
         avatar={
           loading ? (
@@ -24,7 +36,7 @@ function Media(props) {
           ) : (
             <Avatar
               alt="Ted talk"
-              src="https://img.freepik.com/premium-vector/user-profile-icon-flat-style-member-avatar-vector-illustration-isolated-background-human-permission-sign-business-concept_157943-15752.jpg"
+              src="images/Fitness(avatar).png"
             />
           )
         }
@@ -44,14 +56,14 @@ function Media(props) {
               style={{ marginBottom: 6 }}
             />
           ) : (
-            'USER NAME'
+            user.username
           )
         }
         subheader={
           loading ? (
             <Skeleton animation="wave" height={10} width="40%" />
           ) : (
-            'GOAL'
+            user.goal
           )
         }
       />
@@ -75,7 +87,7 @@ function Media(props) {
         ) : (
           <Typography variant="body2" color="text.secondary" component="p">
             {
-              "mamaguevaso"
+             
             }
           </Typography>
         )}
