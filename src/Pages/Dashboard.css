@@ -1,0 +1,37 @@
+#center{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    top: 0;
+    margin: 0;
+    position: fixed;
+}
+
+#ejercicios {
+    width: 100vw;
+    margin-top: 100px;
+    margin-left: 250px;
+    margin-right: 15px;
+}
+#ejercicios div {
+    width: 100vw;
+    display: flex;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#header {
+    position: fixed;
+}
+
+#push {
+    display: flex;
+    justify-content: center;
+    margin-right: 290px;
+    margin-left: 15px;;
+    padding-bottom: 0;
+    margin-bottom: -100px;
+    border-radius: 8px;
+    background-color: black;
+    
+}

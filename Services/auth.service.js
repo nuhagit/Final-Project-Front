@@ -8,3 +8,15 @@ export const login = async (body) => {
         throw Error (error)
     }
 }
+
+export const signup = async (body) => {
+    try {
+        const {data} = await app.post('/auth/signup', body)
+        return data
+    } catch (error) {
+        throw Error(error)
+    }
+}
+
+
+

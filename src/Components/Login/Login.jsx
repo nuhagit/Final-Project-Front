@@ -1,18 +1,29 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Button, Card, CardActions, CardContent, CardHeader, Divider, TextField, FormControlLabel, Checkbox } from '@mui/material'
 import { login } from '../../../Services/auth.service'
+import './SignLogin.css'
 
 function Login() {
+    const navigate = useNavigate()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [showPassword, setShowPassword] = useState(false)
 
     const onLogin = async() => {
-      const {result} = await login({email, password})
-      localStorage.setItem('token', result)
+      const data = await login({email, password})
+      console.log("Login correct")
+      localStorage.setItem('token', data.token) 
+     //localStorage.setItem('userId', data.user.id) 
+      navigate(`/dashboard/${data.user.id}`)
     }
+    const onSignup = async() => {
+        console.log("Redirected to signup")
+        navigate('/signup')
+      }
+    const handleKeyDown = (event) => {if (event.key === 'Enter') {onLogin()}};
     return (
-        <Card sx={{ maxWidth: '500px', className:"marcos"}}>
+        <Card id='login' sx={{ maxWidth: '500px', className:"marcos"}}>
             <CardHeader title="Login" />
             <CardContent>
                 <TextField
@@ -21,6 +32,7 @@ function Login() {
                     variant="outlined"
                     fullWidth={true}
                     sx={{ marginBottom: '20px' }}
+                    onKeyDown={handleKeyDown}
                 />
                 <TextField
                     onChange={(e) => setPassword(e.target.value)}
@@ -28,6 +40,7 @@ function Login() {
                     type={showPassword ? 'text' : 'password'} 
                     variant="outlined"
                     fullWidth={true}
+                    oneKeyDown={handleKeyDown}
                 />
                 <FormControlLabel
                     control={
@@ -42,7 +55,7 @@ function Login() {
             </CardContent>
             <Divider />
             <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <Button>Register</Button>
+                <Button onClick={onSignup}>Sign up</Button>
                 <Button onClick={onLogin} color="success">
                     Login
                 </Button>

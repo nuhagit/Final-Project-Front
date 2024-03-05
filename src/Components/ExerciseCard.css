@@ -1,0 +1,23 @@
+#exercises {
+   
+    display: flex;
+    background-color: #1A799B;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+   
+    
+  }
+  
+  #exercises div {
+    flex: 0 0 calc(33.33% - 16px); /* Makes each item take up one-third of the container width with some margin */
+    margin: 8px; /* Adjust the margin as needed */
+    padding-right: 200px;
+  }
+
+
+
+  #h3 {
+    width: 100%;
+  }
+
+  

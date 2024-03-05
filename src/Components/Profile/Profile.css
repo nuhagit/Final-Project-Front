@@ -1,0 +1,36 @@
+/* ProfileTable.css */
+
+.profile-table {
+    width: 70%; /* Set the width of the table */
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid #ddd; /* Add borders to the table */
+  }
+  
+  .label-cell {
+    font-weight: bold; /* Make the label cells bold */
+    padding: 12px;
+    border-bottom: 1px solid #ddd; /* Add bottom border to label cells */
+  }
+  
+  .value-cell {
+    padding: 12px;
+  }
+  
+  .profile-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row background color */
+  }
+  
+  .profile-table td {
+    border: 1px solid #ddd; /* Add borders to all cells */
+  }
+  
+  /* Increase the font size for better readability */
+  .profile-table td, .profile-table th {
+    font-size: 16px;
+  }
+  .css-1wlk0hk-MuiAvatar-root {
+    width: 90px;
+    height: 90px;
+    
+  }  
