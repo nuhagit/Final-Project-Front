@@ -28,25 +28,9 @@ function Media(props) {
 getUser()
   },[])
   return (
-    user&&<Card sx={{ width: '80vw', height: '60vh', m: 2 }}>
+    user&&<Card id='profile' sx={{ width: '20vw', height: '60vh', m: 2 }}>
       <CardHeader
-        avatar={
-          loading ? (
-            <Skeleton animation="wave" variant="circular" width={40} height={40} />
-          ) : (
-            <Avatar
-              alt="Ted talk"
-              src="images/Fitness(avatar).png"
-            />
-          )
-        }
-        action={
-          loading ? null : (
-            <IconButton aria-label="settings">
-              <MoreVertIcon />
-            </IconButton>
-          )
-        }
+    
         title={
           loading ? (
             <Skeleton
@@ -59,24 +43,25 @@ getUser()
             user.username
           )
         }
-        subheader={
-          loading ? (
-            <Skeleton animation="wave" height={10} width="40%" />
-          ) : (
-            user.goal
-          )
-        }
+        // subheader={
+        //   loading ? (
+        //     <Skeleton animation="wave" height={10} width="40%" />
+        //   ) : (
+        //     user.goal
+        //   )
+        // }
       />
-      {loading ? (
-        <Skeleton sx={{ height: 190 }} animation="wave" variant="rectangular" />
+     {loading ? (
+        <Skeleton sx={{ height: 190}} animation="wave" variant="rectangular" />
       ) : (
-        <CardMedia
+        <CardMedia sx={{display:'flex', justifyItems:'center'}}
           component="img"
-          height="400"
-          image="https://media.istockphoto.com/id/1440204155/es/vector/el-gr%C3%A1fico-de-barras-disminuye-reduciendo-el-negocio.jpg?s=612x612&w=0&k=20&c=WWpauFHtNcU_lLb5Fd-pWRT_eR6nuhyQ92XY7oVZwuQ="
-          alt="Nicola Sturgeon on a TED talk stage"
+          height="200"
+          image="images/Fitness(avatar).png" id="imagenperfil"
+          alt=""
         />
-      )}
+        
+      )} 
 
       <CardContent>
         {loading ? (
@@ -87,9 +72,11 @@ getUser()
         ) : (
           <Typography variant="body2" color="text.secondary" component="p">
             {
+             `Goal:${user.goal}`
              
-            }
-          </Typography>
+            }<br/>{user.height} cm
+            <br/>{user.weight} kg</Typography>
+
         )}
       </CardContent>
     </Card>
@@ -102,8 +89,11 @@ Media.propTypes = {
 
 export default function Facebook() {
   return (
-    <div>
+    <div id="contenedorp">
       <Media />
+      <>
+      <img id='calendario' src="images/CALENDARIO.png" alt="anuel" />
+      </>
     </div>
   );
 }
