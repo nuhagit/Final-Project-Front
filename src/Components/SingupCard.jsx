@@ -31,7 +31,11 @@ function Signup() {
 
 
     }
+    const onLogin = async() => {
+        navigate('/')
+    }
 
+   
  const handleSex = (e) => {
     setSex(e.target.value)
  }
@@ -119,7 +123,7 @@ function Signup() {
             </CardContent>
             <Divider />
             <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-              
+                <Button onClick={onLogin} color="success">Login</Button>
                 <Button onClick={onSignup} color="success">
                     SIGN UP
                 </Button>

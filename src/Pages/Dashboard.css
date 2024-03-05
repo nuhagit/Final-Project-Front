@@ -8,21 +8,26 @@
 }
 
 #ejercicios {
-   
     width: 100vw;
     margin-top: 100px;
     margin-left: 250px;
-
-    
-    
-    /* Add other styles as needed */
+    margin-right: 15px;
 }
 #ejercicios div {
     width: 100vw;
     display: flex;
+    text-align: center;
     margin-top: 100px;
 }
 
 #header {
     position: fixed;
+}
+
+#push {
+    display: flex;
+    justify-content: center;
+    margin-right: 200px;
+    
+    
 }

@@ -42,7 +42,8 @@ loadData()
       <MenuAppBar id='header'/>
      </div>
       <div id='ejercicios'>
-     <ExerciseList />
+        <h1 id='push'>PUSH DAY</h1>
+     <ExerciseList/>
      <ExerciseList2 />
      <ExerciseList3/>
      </div>
