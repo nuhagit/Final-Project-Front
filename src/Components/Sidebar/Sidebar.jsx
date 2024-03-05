@@ -58,10 +58,10 @@ export default function AnchorTemporaryDrawer() {
     >
       <List className='avBox'><img className='avatar' src='../../images/My-Fitness-Journey(avatar).png'/></List>
       <List>
-         {['Dashboard'].map((text, index) => (
+         {['Training'].map((text, index) => (
           <ListItem key={text} disablePadding onClick={onDashboard}>
             <ListItemButton>
-              <img className='dashHome' src='../../images/Home(icon).png'/>
+              <img className='icon' src='../../images/Training(icon).png'/>
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
@@ -72,16 +72,6 @@ export default function AnchorTemporaryDrawer() {
           <ListItem key={text} disablePadding onClick={onProfile}>
             <ListItemButton>
               <img className='icon' src='../../images/Profile(icon).png'/>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-       <List>
-         {['Training'].map((text, index) => (
-          <ListItem key={text} disablePadding onClick={onTraining}>
-            <ListItemButton>
-              <img className='icon' src='../../images/Training(icon).png'/>
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>

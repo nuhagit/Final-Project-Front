@@ -15,7 +15,7 @@ function Login() {
       console.log("Login correct")
       localStorage.setItem('token', data.token) 
      //localStorage.setItem('userId', data.user.id) 
-      navigate(`/dashboard/${data.user.id}`)
+      navigate(`/dashboard`)
     }
     const onSignup = async() => {
         console.log("Redirected to signup")
