@@ -19,39 +19,36 @@ function Signup() {
     const [sex, setSex] = useState('')
     const [availability, setAvailability] = useState('')
     const [goal, setGoal] = useState('')
-
     
     const onSignup = async() => {
-      //const trainingId = 1
-      const data = await signup({username, email, password,age,height,weight,sex,availability,goal})
-      console.log(data)
-      console.log("Sign up correct")
-      localStorage.setItem('token', data.result) 
-      navigate(`/dashboard/${data.user.id}`)
-
-
+        const data = await signup({username, email, password,age,height,weight,sex,availability,goal})
+        localStorage.setItem('token', data.result) 
+        navigate(`/dashboard`)
     }
     const onLogin = async() => {
         navigate('/')
     }
+    const handleSex = (e) => {
+       setSex(e.target.value)
+    }
+    
+     const handleAvailability = (e) => {
+         setAvailability(e.target.value)
+         console.log(availability)
+        }
+        const handleGoal = (e) => {
+           setGoal(e.target.value)
+        }
+        const handleKeyDown = (event) => {if (event.key === 'Enter') {onSignup()}};
+    
+
+
+
 
    
- const handleSex = (e) => {
-    setSex(e.target.value)
- }
-
- const handleAvailability = (e) => {
-
-    setAvailability(e.target.value)
-    console.log(availability)
- }
 
 
- const handleGoal = (e) => {
-    setGoal(e.target.value)
- }
 
- const handleKeyDown = (event) => {if (event.key === 'Enter') {onSignup()}};
 
 
     return (

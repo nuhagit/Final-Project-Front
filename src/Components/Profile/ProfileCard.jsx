@@ -40,7 +40,7 @@ getUser()
               style={{ marginBottom: 6 }}
             />
           ) : (
-            user.username
+            <Typography fontWeight={"bold"} fontSize={"26px"}>{user.username}</Typography>
           )
         }
         // subheader={
@@ -71,12 +71,13 @@ getUser()
           </React.Fragment>
         ) : (
           <Typography variant="body2" color="text.secondary" component="p">
-            {
-             `Goal:${user.goal}`
-             
-            }<br/>{user.height} cm
-            <br/>{user.weight} kg</Typography>
-
+          <p><b>Goal:</b> {user.goal}</p>
+          <p><b>Availability: </b>{user.availability} days/week</p>
+          <p><b>Age: </b>{user.age}</p>
+          <p><b>Height: </b>{user.height} cm</p>
+          <p><b>Weigth: </b>{user.weight} kg</p>
+          <p><b>Sex: </b>{user.sex}</p>
+        </Typography>
         )}
       </CardContent>
     </Card>
