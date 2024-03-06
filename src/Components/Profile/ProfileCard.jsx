@@ -20,7 +20,7 @@ function Media(props) {
   const { loading = false } = props;
   const [user, setUser] = useState(null)
   const getUser = async () => {
-    const result = await GetUserById() 
+    const result = await GetUserById(localStorage.getItem('userId')) 
     setUser(result.result)
     
   }

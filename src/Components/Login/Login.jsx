@@ -14,7 +14,7 @@ function Login() {
       const data = await login({email, password})
       console.log("Login correct")
       localStorage.setItem('token', data.token) 
-     //localStorage.setItem('userId', data.user.id) 
+     localStorage.setItem('userId', data.user.id) 
       navigate(`/dashboard`)
     }
     const onSignup = async() => {
